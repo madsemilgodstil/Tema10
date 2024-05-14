@@ -1,27 +1,24 @@
----
-
----
-
 <div>
-  <li>
-    <a href="events.astro">Events</a>
-    <a href="merch.astro">Merch</a>
-    <a href="about.astro">About</a>
-  </li>
+  <ul>
+    <li><a href="events.astro">Events</a></li>
+    <li><a href="merch.astro">Merch</a></li>
+    <li><a href="about.astro">About</a></li>
+  </ul>
 </div>
 
 <style>
   div {
+    position: relative; /* Set position to relative */
     background-image: url(../public/candy-black-menu.svg);
     background-repeat: no-repeat;
     background-size: contain;
     width: 100vw;
     height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
   }
 
-  li {
+  ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -29,5 +26,18 @@
     justify-content: center;
     height: 100%;
     gap: 2rem;
+    font-size: 2rem;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+  }
+
+  li {
+    text-align: center; /* Center align the text */
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
   }
 </style>
