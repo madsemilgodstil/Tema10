@@ -4,8 +4,37 @@
 
 <nav>
   <li>
-    <img src="#" alt="search" />
-    <img src="../public/Faustix_logo.png" alt="logo" />
-    <img src="#" alt="burger" />
+    <img id="search" src="../public/search.svg" alt="search" />
+    <img id="logo" src="../public/logo-green.png" alt="logo" />
+    <img id="burger" src="../public/burger.png" alt="burger" />
   </li>
 </nav>
+
+<style>
+  nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  nav li {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #logo {
+    max-width: 50%;
+  }
+
+  #burger {
+    max-width: 5%;
+  }
+
+  #search {
+    max-width: 5%;
+  }
+</style>
