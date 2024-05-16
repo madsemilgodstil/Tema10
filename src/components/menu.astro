@@ -19,22 +19,35 @@
   }
 
   nav li {
+    width: 100%;
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  img:hover {
+    transform: scale(1.1);
   }
 
   #logo {
-    max-width: 50%;
+    max-width: 20%;
   }
 
   #burger {
-    max-width: 5%;
+    max-width: 2%;
   }
 
   #search {
-    max-width: 5%;
+    max-width: 2%;
   }
 </style>
