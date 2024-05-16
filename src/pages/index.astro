@@ -2,6 +2,7 @@
 import Menu from "../components/menu.astro";
 import Footer from "../components/footer.astro";
 import Burger from "../components/menu-open.astro";
+import Loader from "../components/loader.astro";
 ---
 
 <html lang="en">
@@ -17,8 +18,9 @@ import Burger from "../components/menu-open.astro";
     <title>Faustix.dk</title>
   </head>
   <body>
+    <Loader />
     <Menu />
-    <Burger />
+
     <Footer />
   </body>
 </html>
