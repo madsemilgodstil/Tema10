@@ -3,17 +3,15 @@
 ---
 
 <nav>
-  <ul>
-    <li>
-      <img class="icon" src="../public/instagram.png" alt="instagram" />
-      <img class="icon" src="../public/spotify.svg" alt="spotify" />
-      <img class="icon" src="../public/search.svg" alt="search" />
-    </li>
-    <li><img id="logo" src="../public/logo-green.png" alt="logo" /></li>
-    <li>
-      <img id="burger" src="../public/burger.png" alt="burger" />
-    </li>
-  </ul>
+  <li class="icon-link">
+    <img class="icon" src="../public/instagram.png" alt="instagram" />
+    <img class="icon" src="../public/spotify.svg" alt="spotify" />
+    <img class="icon" src="../public/search.svg" alt="search" />
+  </li>
+  <li><img id="logo" src="../public/logo-green.png" alt="logo" /></li>
+  <li>
+    <img id="burger" src="../public/burger.png" alt="burger" />
+  </li>
 </nav>
 
 <style>
@@ -24,19 +22,18 @@
     padding: 1rem;
   }
 
-  ul {
-    width: 100%;
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-  }
-
   li {
     width: 100%;
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: space-around;
+  }
+
+  .icon-link {
+    display: flex;
+    justify-content: space-evenly;
+    float: left;
   }
 
   a {
