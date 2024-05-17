@@ -1,15 +1,19 @@
-<div>
-  <ul>
+---
+
+---
+
+<astro-fragment>
+  <div class="menu">
     <li><a href="events.astro">Events</a></li>
     <li><a href="merch.astro">Merch</a></li>
     <li><a href="about.astro">About</a></li>
-  </ul>
-</div>
+  </div>
+</astro-fragment>
 
 <style>
-  div {
+  .menu {
     position: relative; /* Set position to relative */
-    background-image: url(../public/candy-black-menu.svg);
+    background-image: url(../public/candy-black-empty.svg);
     background-repeat: no-repeat;
     background-size: contain;
     width: 100vw;
@@ -20,7 +24,7 @@
 
   ul {
     list-style-type: none;
-    display: flex;
+    display: none; /* Initially hide the menu */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -39,5 +43,24 @@
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
+  }
+
+  /* Style the burger menu icon */
+  .burger-menu-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 999; /* Ensure it's above other content */
+  }
+
+  /* Hide checkbox */
+  .burger-menu-toggle {
+    display: none;
+  }
+
+  /* When the checkbox is checked, show the menu */
+  .burger-menu-toggle:checked + ul {
+    display: flex;
   }
 </style>

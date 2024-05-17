@@ -61,3 +61,14 @@
     max-width: 10%;
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var burgerIcon = document.getElementById("burger");
+    var menu = document.querySelector("nav");
+
+    burgerIcon.addEventListener("click", function () {
+      menu.classList.toggle("menu-open");
+    });
+  });
+</script>
