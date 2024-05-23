@@ -4,6 +4,7 @@ import Footer from "../components/footer.astro";
 import Burger from "../components/menu-open.astro";
 import Loader from "../components/loader.astro";
 import "../style.css";
+import CardEvent from "../components/card-event.astro";
 ---
 
 <html lang="en">
@@ -22,6 +23,12 @@ import "../style.css";
     <Loader />
     <Menu />
     <img id="headshot" src="../public/hs-1.jpg" alt="headshot" />
+    <div class="cardIndex">
+      <CardEvent />
+      <CardEvent />
+      <CardEvent />
+      <CardEvent />
+    </div>
 
     <Footer />
   </body>
@@ -31,10 +38,16 @@ import "../style.css";
   body {
     background-color: var(--tertiary-color);
   }
-
   #headshot {
     width: 100%;
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
+  }
+
+  .cardIndex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 5rem;
+    margin-top: 100px;
   }
 </style>
