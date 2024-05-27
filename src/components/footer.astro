@@ -1,0 +1,63 @@
+---
+import "../styles/style.css";
+---
+
+<footer>
+  <div class="container">
+    <img src="../public/icons/some/face-white.svg" alt="facebook" />
+    <img src="public/icons/some/insta-white.svg" alt="instagram" />
+    <img src="public/icons/some/spoti-white.svg" alt="spotify" />
+    <img src="public/icons/some/tiktok-white.svg" alt="tiktok" />
+    <img src="public/icons/some/search-white.svg" alt="search" />
+  </div>
+
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/artist/6jPriOYMyUL9kNonBI1CNd?utm_source=generator"
+    width="100%"
+    height="200"
+    frameborder="0"
+    allowfullscreen
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"></iframe>
+</footer>
+
+<style>
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: var(--teriary-color);
+    color: var(--quaternary-color);
+    padding: 1rem;
+    margin-top: 100px;
+  }
+
+  iframe {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 100%;
+    height: 100%;
+    margin-top: 1%;
+  }
+  .container {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  img {
+    max-width: 5%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  img:hover {
+    transform: scale(1.2);
+  }
+</style>

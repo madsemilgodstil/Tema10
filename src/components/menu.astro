@@ -12,6 +12,12 @@ import "../styles/style.css";
   <li>
     <img id="burger" src="../public/burger.png" alt="burger" />
   </li>
+  <div id="dropdown-menu" class="dropdown-menu">
+    <a href="#">Events</a>
+    <a href="#">Merch</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
 </nav>
 
 <style>
@@ -39,6 +45,10 @@ import "../styles/style.css";
 
   a {
     text-decoration: none;
+    display: block;
+    padding: 1rem;
+    font-size: var(--font-size-large);
+    color: var(--green-color);
   }
 
   img {
@@ -61,12 +71,41 @@ import "../styles/style.css";
   .icon {
     max-width: 10%;
   }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    background-color: var(--black-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .dropdown-menu a {
+    padding: 50px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+  .dropdown-menu a:hover {
+    background-color: var(--green-color);
+    color: var(--black-color);
+  }
+
+  .menu-open .dropdown-menu {
+    display: block;
+  }
 </style>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var burgerIcon = document.getElementById("burger");
     var menu = document.querySelector("nav");
+    var dropdownMenu = document.getElementById("dropdown-menu");
 
     burgerIcon.addEventListener("click", function () {
       menu.classList.toggle("menu-open");

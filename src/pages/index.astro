@@ -23,14 +23,13 @@ import CardEvent from "../components/card-event.astro";
       <CardEvent />
       <CardEvent />
       <CardEvent />
-      <CardEvent />
     </div>
   </main>
 </MainLayout>
 
 <style>
   body {
-    background-color: var(--tertiary-color);
+    background-color: var(--black-color);
   }
   #headshot {
     width: 100%;
@@ -39,7 +38,7 @@ import CardEvent from "../components/card-event.astro";
 
   .cardIndex {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     grid-template-rows: 1fr;
     gap: 5rem;
     margin-top: 100px;
