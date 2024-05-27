@@ -8,15 +8,17 @@ import "../styles/style.css";
     <img class="icon" src="../public/spotify.svg" alt="spotify" />
     <img class="icon" src="../public/search.svg" alt="search" />
   </li>
-  <li><img id="logo" src="../public/logo-green.png" alt="logo" /></li>
+  <li>
+    <a href="/"><img id="logo" src="../public/logo-green.png" alt="logo" /></a>
+  </li>
   <li>
     <img id="burger" src="../public/burger.png" alt="burger" />
   </li>
   <div id="dropdown-menu" class="dropdown-menu">
-    <a href="#">Events</a>
-    <a href="#">Merch</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="/events">Events</a>
+    <a href="/merch">Merch</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
   </div>
 </nav>
 
@@ -25,12 +27,13 @@ import "../styles/style.css";
     display: flex;
     width: 100%;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: var(--tertiary-color);
   }
 
   li {
     width: 100%;
+    text-align: center;
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -40,7 +43,7 @@ import "../styles/style.css";
   .icon-link {
     display: flex;
     justify-content: space-evenly;
-    float: left;
+    width: 100%;
   }
 
   a {
@@ -65,7 +68,8 @@ import "../styles/style.css";
   }
 
   #burger {
-    max-width: 10%;
+    max-width: 8%;
+    margin-left: 50%;
   }
 
   .icon {
@@ -75,10 +79,10 @@ import "../styles/style.css";
   .dropdown-menu {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 12%;
     right: 0px;
     background-color: var(--black-color);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
     z-index: 1;
     width: 100%;
     height: 100%;

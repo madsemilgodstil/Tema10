@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --green-color: #00fddc;
   --red-color: #e20040;
@@ -17,4 +18,8 @@
   --font_size_regular: 1rem;
   --font_size_small: 0.875rem;
   --font_size_tiny: 0.75rem;
+}
+
+body {
+  background-color: var(--white-color);
 }
