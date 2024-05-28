@@ -9,7 +9,12 @@ import CardEvent from "../components/card-event.astro";
 <MainLayout title="About">
   <main>
     <h1>
-      <img class="logo-small" src="public/logo-red.svg" alt="logo" />
+      <img
+        class="logo-small"
+        src="public/logo-red.svg"
+        alt="logo"
+        loading="eager"
+      />
     </h1>
     <div class="grid-container">
       <img class="image" src="../public/hs-2.webp" alt="headshot" />
@@ -43,7 +48,12 @@ import CardEvent from "../components/card-event.astro";
         on a regular basis and has played some of the biggest festival stages in
         Denmark.
       </p>
-      <img class="image-2" src="public/hs-1.webp" alt="faustix" />
+      <img
+        class="image-2"
+        src="public/hs-1.webp"
+        alt="faustix"
+        loading="lazy"
+      />
     </div>
   </main>
 </MainLayout>
