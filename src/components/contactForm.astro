@@ -2,15 +2,103 @@
 import "../styles/style.css";
 ---
 
-<article></article>
+<article>
+  <form action="">
+    <h1>Send me a message</h1>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name" />
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Your email" />
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Your message"></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+  <div class="contact-info">
+    <h2>Contact info</h2>
+    <h3>Label</h3>
+    <p>
+      Warner Music Denmark <br /> Falkoner Allé 7, 3. sal 2000 Frederiksberg Danmark
+      <br />
+      Telefon: +45 36 93 54 00 denmark.reception@warnermusic.com
+    </p>
+    <h3>Management</h3>
+    <p>Jesper Nordraak Green</p>
+    <h3>Bookings</h3>
+    <p>
+      Prime Music <br />
+
+      Nyhavn 43A, 2.th. <br />
+
+      1051 København K <br />
+    </p>
+  </div>
+</article>
 
 <style>
+  h1 {
+    padding: 1rem;
+    text-align: center;
+    color: var(--black-color);
+  }
   article {
-    max-width: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    max-width: 600px;
+    height: auto;
     margin: auto;
     padding: 1rem;
     border-radius: 20px;
-    background-color: var(--quinary-color);
-    color: var(--teriary-color);
+    background-color: var(--white-color);
+    margin-top: 100px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--white-color);
+  }
+
+  label {
+    padding: 1rem;
+    text-align: center;
+    color: var(--black-color);
+  }
+
+  input {
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--black-color);
+    color: var(--white-color);
+  }
+
+  textarea {
+    padding: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--black-color);
+    color: var(--white-color);
+  }
+
+  button {
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+  }
+
+  .contact-info {
+    color: var(--black-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 4rem;
   }
 </style>

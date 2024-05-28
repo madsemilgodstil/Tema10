@@ -24,7 +24,9 @@ console.log(data);
     <div id="cardIndex" class="cardIndex">
       {
         data.map((show) => {
-          return <CardEvent title={show.event} where={show.city} />;
+          return (
+            <CardEvent title={show.event} where={show.city} date={show.dato} />
+          );
         })
       }
     </div>

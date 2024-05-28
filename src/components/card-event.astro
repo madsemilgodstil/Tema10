@@ -3,11 +3,13 @@ import "../styles/style.css";
 
 const title = Astro.props.title;
 const where = Astro.props.where;
+const date = Astro.props.date;
 ---
 
 <article>
   <img src="./public/event.jpg" alt="event" />
   <h1>{title}</h1>
+  <h2>{date}</h2>
   <p>
     {where}
   </p>
@@ -30,6 +32,11 @@ const where = Astro.props.where;
     padding: 1rem;
     text-align: center;
   }
+  h2 {
+    padding: 1rem;
+    text-align: center;
+    color: var(--black-color);
+  }
 
   p {
     padding: 2rem;
@@ -48,6 +55,7 @@ const where = Astro.props.where;
 
   article:hover {
     transform: scale(1.2);
+    box-shadow: 0px 0px 10px 1px black;
   }
 
   img {

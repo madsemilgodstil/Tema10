@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--black-color);
+}
+
 :root {
   --green-color: #00fddc;
   --red-color: #e20040;
@@ -20,6 +24,17 @@
   --font_size_tiny: 0.75rem;
 }
 
-body {
-  background-color: var(--white-color);
+@font-face {
+  font-family: "Main";
+  src: url();
+}
+
+@font-face {
+  font-family: "Second";
+  src: url();
+}
+
+@font-face {
+  font-family: "Third";
+  src: url();
 }

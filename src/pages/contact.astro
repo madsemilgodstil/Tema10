@@ -2,10 +2,19 @@
 import MainLayout from "../layouts/mainLayout.astro";
 import Burger from "../components/menu-open.astro";
 import Loader from "../components/loader.astro";
+import ContactForm from "../components/contactForm.astro";
 import "../styles/style.css";
 import CardEvent from "../components/card-event.astro";
 ---
 
 <MainLayout title="Contact">
-  <main></main>
+  <main>
+    <ContactForm />
+  </main>
 </MainLayout>
+
+<style>
+  main {
+    background-color: var(--black-color);
+  }
+</style>

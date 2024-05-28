@@ -5,25 +5,29 @@ import Loader from "../components/loader.astro";
 import "../styles/style.css";
 import CardEvent from "../components/card-event.astro";
 import Hero from "../components/hero.astro";
+
+const data = await fetch(
+  "https://xlglwtfhfkynbpmxmmgm.supabase.co/rest/v1/events?limit=3",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhsZ2x3dGZoZmt5bmJwbXhtbWdtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU4NDk0MzksImV4cCI6MjAzMTQyNTQzOX0.Al0VKZHbmGl0_GNXgjV1wQ-WuOxdn1YGxnCjoeh2nBw",
+    },
+  }
+).then((res) => res.json());
+console.log(data);
 ---
 
 <MainLayout title="Frontpage">
   <main>
-    <!-- <img id="headshot" src="../public/hs-1.jpg" alt="headshot" />
-    <iframe
-      style="border-radius:12px"
-      src="https://open.spotify.com/embed/artist/6jPriOYMyUL9kNonBI1CNd?utm_source=generator&theme=0"
-      width="100%"
-      height="352"
-      frameborder="0"
-      allowfullscreen
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"></iframe> -->
     <Hero />
     <div class="cardIndex">
-      <CardEvent />
-      <CardEvent />
-      <CardEvent />
+      {
+        data.map((show) => {
+          return <CardEvent title={show.event} where={show.city} />;
+        })
+      }
     </div>
   </main>
 </MainLayout>
