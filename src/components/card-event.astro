@@ -4,10 +4,11 @@ import "../styles/style.css";
 const title = Astro.props.title;
 const where = Astro.props.where;
 const date = Astro.props.date;
+const Img = Astro.props.Img;
 ---
 
 <article>
-  <img src="./public/event.jpg" alt="event" />
+  <img src={Img} alt="event" />
   <h1>{title}</h1>
   <h2>{date}</h2>
   <p>
@@ -18,7 +19,7 @@ const date = Astro.props.date;
 
 <style>
   article {
-    max-width: 300px;
+    width: 300px;
     margin: auto;
     padding: 1rem;
     border-radius: 20px;
@@ -26,6 +27,11 @@ const date = Astro.props.date;
     color: var(--black-color);
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    opacity: 0.6;
+  }
+
+  article:hover {
+    opacity: 1;
   }
 
   h1 {
@@ -41,6 +47,7 @@ const date = Astro.props.date;
   p {
     padding: 2rem;
     text-align: center;
+    color: var(--black-color);
   }
 
   button {

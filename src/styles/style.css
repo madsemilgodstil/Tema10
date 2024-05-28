@@ -26,15 +26,54 @@ body {
 
 @font-face {
   font-family: "Main";
-  src: url();
+  src: url(../public/fonts/archivoblack-regular-webfont.woff) format("woff");
+  src: url(../public/fonts/archivoblack-regular-webfont.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Second";
-  src: url();
+  src: url(../public/fonts/ubuntu-regular-webfont.woff) format("woff");
+  src: url(../public/fonts/ubuntu-regular-webfont.woff2) format("woff2");
 }
 
 @font-face {
   font-family: "Third";
-  src: url();
+  src: url(../public/fonts/kanit-light-webfont.woff) format("woff");
+  src: url(../public/fonts/kanit-light-webfont.woff2) format("woff2");
+}
+
+h1 {
+  font-family: "Main";
+  font-size: var(--font_size_large);
+}
+
+h2 {
+  font-family: "Main";
+  font-size: var(--font_size_medium);
+}
+
+h3 {
+  font-family: "Second";
+  font-size: var(--font_size_medium);
+}
+
+p {
+  font-family: "Third";
+  font-size: var(--font_size_regular);
+}
+
+a {
+  text-decoration: none;
+  font-family: "Third";
+  color: var(--white-color);
+}
+
+label {
+  font-family: "Third";
+  font-size: var(--font_size_regular);
+}
+
+button {
+  font-family: "Third";
+  font-size: var(--font_size_regular);
 }

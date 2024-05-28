@@ -25,7 +25,14 @@ console.log(data);
     <div class="cardIndex">
       {
         data.map((show) => {
-          return <CardEvent title={show.event} where={show.city} />;
+          return (
+            <CardEvent
+              title={show.event}
+              where={show.city}
+              date={show.dato}
+              img={show.img}
+            />
+          );
         })
       }
     </div>
@@ -35,10 +42,6 @@ console.log(data);
 <style>
   body {
     background-color: var(--black-color);
-  }
-  #headshot {
-    width: 100%;
-    object-fit: cover;
   }
 
   .cardIndex {
