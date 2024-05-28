@@ -11,7 +11,15 @@ const description = Astro.props.description;
   <p>
     {description}
   </p>
-  <button>Tickets</button>
+  <button
+    >Put in cart <span
+      ><img
+        class="cart"
+        src="../public/icons/some/cart-white.svg"
+        alt=""
+      /></span
+    >
+  </button>
 </article>
 
 <style>
@@ -47,6 +55,11 @@ const description = Astro.props.description;
 
   article:hover {
     transform: scale(1.2);
+  }
+
+  .cart {
+    max-width: 10%;
+    margin-left: 50%;
   }
 
   img {
