@@ -1,14 +1,17 @@
 ---
 import "../styles/style.css";
+
+const title = Astro.props.title;
+const where = Astro.props.where;
 ---
 
 <article>
   <img src="./public/event.jpg" alt="event" />
-  <h1>Card Event</h1>
+  <h1>{title}</h1>
   <p>
-    This is a card event component. It is used in the index page. It is also
-    used in the events page.
+    {where}
   </p>
+  <button>Tickets</button>
 </article>
 
 <style>
@@ -23,6 +26,26 @@ import "../styles/style.css";
     transition: transform 0.3s ease-in-out;
   }
 
+  h1 {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  p {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+  }
+
   article:hover {
     transform: scale(1.2);
   }
@@ -33,3 +56,5 @@ import "../styles/style.css";
     border-radius: 20px;
   }
 </style>
+
+<script></script>

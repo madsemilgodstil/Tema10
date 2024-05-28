@@ -1,3 +1,57 @@
 ---
+import "../styles/style.css";
 
+const title = Astro.props.title;
+const description = Astro.props.description;
 ---
+
+<article>
+  <img src="./public/event.jpg" alt="merch" />
+  <h1>{title}</h1>
+  <p>
+    {description}
+  </p>
+  <button>Tickets</button>
+</article>
+
+<style>
+  article {
+    max-width: 300px;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  h1 {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  p {
+    padding: 2rem;
+  }
+
+  button {
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    cursor: pointer;
+  }
+
+  article:hover {
+    transform: scale(1.2);
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+</style>

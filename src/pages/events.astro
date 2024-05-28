@@ -4,8 +4,81 @@ import Burger from "../components/menu-open.astro";
 import Loader from "../components/loader.astro";
 import "../styles/style.css";
 import CardEvent from "../components/card-event.astro";
+
+const data = await fetch(
+  "https://xlglwtfhfkynbpmxmmgm.supabase.co/rest/v1/events",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhsZ2x3dGZoZmt5bmJwbXhtbWdtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTU4NDk0MzksImV4cCI6MjAzMTQyNTQzOX0.Al0VKZHbmGl0_GNXgjV1wQ-WuOxdn1YGxnCjoeh2nBw",
+    },
+  }
+).then((res) => res.json());
+console.log(data);
 ---
 
 <MainLayout title="Events">
-  <main></main>
+  <main>
+    <button id="toggleView" class="toggle-button">Switch to List View</button>
+    <div id="cardIndex" class="cardIndex">
+      {
+        data.map((show) => {
+          return <CardEvent title={show.event} where={show.city} />;
+        })
+      }
+    </div>
+  </main>
 </MainLayout>
+
+<style>
+  .cardIndex {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 5rem;
+    margin-top: 100px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .list-view {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .list-view .CardEvent {
+    margin-bottom: 2rem;
+  }
+
+  .toggle-button {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: var(--tertiary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .toggle-button:hover {
+    background-color: var(--green-color);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggleButton = document.getElementById("toggleView");
+    var cardIndex = document.getElementById("cardIndex");
+
+    toggleButton.addEventListener("click", function () {
+      if (cardIndex.classList.contains("list-view")) {
+        cardIndex.classList.remove("list-view");
+        toggleButton.textContent = "Switch to List View";
+      } else {
+        cardIndex.classList.add("list-view");
+        toggleButton.textContent = "Switch to Box View";
+      }
+    });
+  });
+</script>

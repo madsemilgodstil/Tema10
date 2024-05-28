@@ -4,11 +4,12 @@ import Burger from "../components/menu-open.astro";
 import Loader from "../components/loader.astro";
 import "../styles/style.css";
 import CardEvent from "../components/card-event.astro";
+import Hero from "../components/hero.astro";
 ---
 
 <MainLayout title="Frontpage">
   <main>
-    <img id="headshot" src="../public/hs-1.jpg" alt="headshot" />
+    <!-- <img id="headshot" src="../public/hs-1.jpg" alt="headshot" />
     <iframe
       style="border-radius:12px"
       src="https://open.spotify.com/embed/artist/6jPriOYMyUL9kNonBI1CNd?utm_source=generator&theme=0"
@@ -17,8 +18,8 @@ import CardEvent from "../components/card-event.astro";
       frameborder="0"
       allowfullscreen
       allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy"></iframe>
-
+      loading="lazy"></iframe> -->
+    <Hero />
     <div class="cardIndex">
       <CardEvent />
       <CardEvent />
