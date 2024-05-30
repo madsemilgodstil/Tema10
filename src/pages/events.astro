@@ -37,6 +37,13 @@ console.log(data);
         })
       }
     </div>
+    <a class="container_a" href="#"
+      ><img
+        class="top"
+        src="http://frederikkevolkdal.com/iconer_faustix/icons/some/top-white.svg"
+        alt="top"
+      /></a
+    >
   </main>
 </MainLayout>
 
@@ -47,6 +54,24 @@ console.log(data);
     gap: 5rem;
     margin-top: 100px;
     transition: all 0.3s ease-in-out;
+  }
+
+  .top {
+    width: 10%;
+    position: sticky;
+    bottom: 0;
+    left: 100;
+    z-index: 1000;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .top {
+      width: 4%;
+      position: sticky;
+      bottom: 0;
+      left: 100;
+      z-index: 1000;
+    }
   }
 
   .list-view {
