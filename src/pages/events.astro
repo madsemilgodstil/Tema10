@@ -21,6 +21,7 @@ console.log(data);
 
 <MainLayout title="Events">
   <main>
+    <h1>Events</h1>
     <!-- <button id="toggleView" class="toggle-button">Switch to List View</button> -->
     <div id="cardIndex" class="cardIndex">
       {
@@ -48,6 +49,14 @@ console.log(data);
 </MainLayout>
 
 <style>
+  h1 {
+    color: var(--grey-color);
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 3rem;
+    text-align: center;
+  }
+
   .cardIndex {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));

@@ -22,6 +22,7 @@ console.log(data);
 <MainLayout title="Frontpage">
   <main>
     <Hero />
+    <h1>Upcoming Events</h1>
     <div class="cardIndex">
       {
         data.map((show) => {
@@ -42,6 +43,14 @@ console.log(data);
 <style>
   body {
     background-color: var(--black-color);
+  }
+
+  h1 {
+    color: var(--grey-color);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    font-size: 3rem;
   }
 
   .cardIndex {

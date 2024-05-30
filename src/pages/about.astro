@@ -8,6 +8,7 @@ import CardEvent from "../components/card-event.astro";
 
 <MainLayout title="About">
   <main>
+    <h1>About</h1>
     <div class="grid-container">
       <img
         class="image"
@@ -87,15 +88,33 @@ import CardEvent from "../components/card-event.astro";
     text-align: left;
     font-size: 1rem;
     color: var(--white-color);
-    margin-left: 20%;
+    margin-top: -100px;
   }
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 1rem;
     margin-left: 10%;
     margin-right: 10%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 1rem;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 100px;
+    }
+    p {
+      text-align: left;
+      font-size: 1rem;
+      color: var(--white-color);
+      margin-left: 20%;
+    }
   }
   .image {
     width: 100%;
