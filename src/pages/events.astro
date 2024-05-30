@@ -25,7 +25,12 @@ console.log(data);
       {
         data.map((show) => {
           return (
-            <CardEvent title={show.event} where={show.city} date={show.dato} />
+            <CardEvent
+              title={show.event}
+              where={show.city}
+              date={show.dato}
+              picture={show.pictures}
+            />
           );
         })
       }

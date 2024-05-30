@@ -4,11 +4,11 @@ import "../styles/style.css";
 const title = Astro.props.title;
 const where = Astro.props.where;
 const date = Astro.props.date;
-const Img = Astro.props.Img;
+const picture = Astro.props.picture;
 ---
 
 <article>
-  <img src={Img} alt="event" />
+  <img src={picture} alt="event" />
   <h1>{title}</h1>
   <h2>{date}</h2>
   <p>
