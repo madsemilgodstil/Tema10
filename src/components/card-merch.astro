@@ -11,7 +11,7 @@ const picture = Astro.props.picture;
 <article>
   <img src={picture} alt="merch" />
   <h1>{title}</h1>
-  <p>
+  <p class="product-info">
     {productinfo}
   </p>
   <p>
@@ -41,16 +41,24 @@ const picture = Astro.props.picture;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
   }
-
   h1 {
     padding: 1rem;
     text-align: center;
   }
-
+  h2 {
+    padding: 1rem;
+    text-align: center;
+  }
   p {
-    padding: 2rem;
+    padding: 1rem;
+    text-align: center;
   }
 
+  .product-info {
+    padding: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+  }
   button {
     display: block;
     margin: auto;
@@ -60,17 +68,14 @@ const picture = Astro.props.picture;
     color: var(--white-color);
     cursor: pointer;
   }
-
   article:hover {
     transform: scale(1.2);
     box-shadow: 0px 0px 10px 1px black;
   }
-
   .cart {
     max-width: 10%;
     margin-left: 50%;
   }
-
   img {
     width: 100%;
     object-fit: cover;
