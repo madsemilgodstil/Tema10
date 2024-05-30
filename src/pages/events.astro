@@ -4,6 +4,7 @@ import Burger from "../components/menu-open.astro";
 import Loader from "../components/loader.astro";
 import "../styles/style.css";
 import CardEvent from "../components/card-event.astro";
+import ListEvent from "../components/list-event.astro";
 
 const data = await fetch(
   "https://xlglwtfhfkynbpmxmmgm.supabase.co/rest/v1/events",
@@ -30,6 +31,7 @@ console.log(data);
               where={show.city}
               date={show.dato}
               picture={show.pictures}
+              link={show.links}
             />
           );
         })
@@ -57,14 +59,15 @@ console.log(data);
   }
 
   .toggle-button {
-    margin: 20px;
+    width: 30%;
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     cursor: pointer;
-    background-color: var(--tertiary-color);
+    background-color: var(--black-color);
     color: var(--white-color);
     border: none;
     border-radius: 5px;
+
     transition: background-color 0.3s ease-in-out;
   }
 

@@ -7,7 +7,7 @@ import CardEvent from "../components/card-event.astro";
 import CardMerch from "../components/card-merch.astro";
 
 const data = await fetch(
-  "https://xlglwtfhfkynbpmxmmgm.supabase.co/rest/v1/events",
+  "https://xlglwtfhfkynbpmxmmgm.supabase.co/rest/v1/shop",
   {
     method: "GET",
     headers: {
@@ -23,7 +23,19 @@ console.log(data);
   <main>
     <button id="toggleView" class="toggle-button">Switch to List View</button>
     <div id="cardIndex" class="cardIndex">
-      <CardMerch />
+      {
+        data.map((show) => {
+          return (
+            <CardMerch
+              title={show.title}
+              price={show.price}
+              colour={show.colour}
+              picture={show.picture}
+              productinfo={show.productinfo}
+            />
+          );
+        })
+      }
     </div>
   </main>
 </MainLayout>

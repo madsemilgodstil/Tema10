@@ -5,6 +5,7 @@ const title = Astro.props.title;
 const where = Astro.props.where;
 const date = Astro.props.date;
 const picture = Astro.props.picture;
+const link = Astro.props.link;
 ---
 
 <article>
@@ -14,7 +15,7 @@ const picture = Astro.props.picture;
   <p>
     {where}
   </p>
-  <button>Tickets</button>
+  <button onclick={`window.open('${link}', '_blank')`}>Tickets</button>
 </article>
 
 <style>

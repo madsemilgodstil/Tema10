@@ -1,0 +1,31 @@
+---
+import "../styles/style.css";
+
+const title = Astro.props.title;
+const where = Astro.props.where;
+const date = Astro.props.date;
+const picture = Astro.props.picture;
+const link = Astro.props.link;
+---
+
+<article>
+  <a href={link} target="_blank">
+    <h1>{title}</h1>
+    <h1>{date}</h1>
+    <h1>{where}</h1></a
+  >
+</article>
+
+<style>
+  a {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  h1 {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--white-color);
+  }
+</style>

@@ -2,15 +2,23 @@
 import "../styles/style.css";
 
 const title = Astro.props.title;
-const description = Astro.props.description;
+const colour = Astro.props.colour;
+const price = Astro.props.price;
+const productinfo = Astro.props.productinfo;
+const picture = Astro.props.picture;
 ---
 
 <article>
-  <img src="./public/event.jpg" alt="merch" />
+  <img src={picture} alt="merch" />
   <h1>{title}</h1>
   <p>
-    {description}
+    {productinfo}
   </p>
+  <p>
+    {colour}
+  </p>
+  <h2>{price}</h2>
+
   <button
     >Put in cart <span
       ><img
