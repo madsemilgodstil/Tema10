@@ -4,21 +4,30 @@ import "../styles/style.css";
 
 <nav>
   <li class="icon-link">
-    <img
-      class="icon"
-      src="http://frederikkevolkdal.com/iconer_faustix/icons/some/insta-green.svg"
-      alt="instagram"
-    />
-    <img
-      class="icon"
-      src="http://frederikkevolkdal.com/iconer_faustix/icons/some/spoti-green.svg"
-      alt="spotify"
-    />
-    <img
-      class="icon"
-      src="http://frederikkevolkdal.com/iconer_faustix/icons/some/search-green.svg"
-      alt="search"
-    />
+    <a href="https://www.instagram.com/faustix/" target="_blank">
+      <img
+        class="icon"
+        src="http://frederikkevolkdal.com/iconer_faustix/icons/some/insta-green.svg"
+        alt="instagram"
+      />
+    </a>
+    <a
+      href="https://open.spotify.com/embed/artist/6jPriOYMyUL9kNonBI1CNd?utm_source=generator"
+      target="_blank"
+    >
+      <img
+        class="icon"
+        src="http://frederikkevolkdal.com/iconer_faustix/icons/some/spoti-green.svg"
+        alt="spotify"
+      /></a
+    >
+    <a>
+      <img
+        class="search"
+        src="http://frederikkevolkdal.com/iconer_faustix/icons/some/search-green.svg"
+        alt="search"
+      /></a
+    >
   </li>
   <li>
     <a href="/"
@@ -65,7 +74,6 @@ import "../styles/style.css";
   .icon-link {
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
   }
 
   a {
@@ -96,7 +104,11 @@ import "../styles/style.css";
   }
 
   .icon {
-    max-width: 10%;
+    width: 40%;
+  }
+
+  .search {
+    max-width: 40%;
   }
 
   .dropdown-menu {
