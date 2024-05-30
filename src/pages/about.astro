@@ -17,40 +17,47 @@ import CardEvent from "../components/card-event.astro";
       />
     </h1>
     <div class="grid-container">
-      <img class="image" src="../public/hs-2.webp" alt="headshot" />
-      <p>
-        Faustix has over the years marked himself on the international music
-        scene with a production-collaboration with Diplo on the smash hit
-        ‘Revolution’, which became part of the Bernie Sanders presidential
-        campaign.
-        <span></span>
-        <br />
-        <br />
-        <br />
-        In 2016 Faustix remixed the official UEFA EURO song by David Guetta and Zara
-        Larsson. Furthermore, he has done remixes/productions for the likes of Chris
-        Brown, Icona Pop and Major Lazer and have had several nominations and wins
-        at Danish Music Awards, Danish DJ Awards and Danish Club Awards.
-        <br />
-        <br />
-        <br />
-        Faustix has achieved more than 300 million streams on Spotify on his own
-        singles and remixes including his massive hits “Watching You” with the Dutch
-        producer Alvaro, "Crying in The Sun", "Thorns" and “Need You”. Over the past
-        year he has additionally started up his EP/album series “OMG It’s Lit”, releasing
-        6 already.
-        <br />
-        <br />
-        <br />
-        The series is a tribute to club-music and has received massive support from
-        DJs such as Diplo, Alvaro, Blasterjax, Hardwell, Tiesto and Ummet Ozcan.
-        Furthermore, he has reached more than 2 mio monthly listeners on Spotify
-        on a regular basis and has played some of the biggest festival stages in
-        Denmark.
-      </p>
+      <img
+        class="image"
+        src="http://frederikkevolkdal.com/img_video/hs-2.webp"
+        alt="headshot"
+      />
+      <div>
+        <p>
+          Faustix has over the years marked himself on the international music
+          scene with a production-collaboration with Diplo on the smash hit
+          ‘Revolution’, which became part of the Bernie Sanders presidential
+          campaign.
+
+          <br />
+          <br />
+          <br />
+          In 2016 Faustix remixed the official UEFA EURO song by David Guetta and
+          Zara Larsson. Furthermore, he has done remixes/productions for the likes
+          of Chris Brown, Icona Pop and Major Lazer and have had several nominations
+          and wins at Danish Music Awards, Danish DJ Awards and Danish Club Awards.
+          <br />
+          <br />
+          <br />
+          Faustix has achieved more than 300 million streams on Spotify on his own
+          singles and remixes including his massive hits “Watching You” with the
+          Dutch producer Alvaro, "Crying in The Sun", "Thorns" and “Need You”. Over
+          the past year he has additionally started up his EP/album series “OMG It’s
+          Lit”, releasing 6 already.
+          <br />
+          <br />
+          <br />
+          The series is a tribute to club-music and has received massive support
+          from DJs such as Diplo, Alvaro, Blasterjax, Hardwell, Tiesto and Ummet
+          Ozcan. Furthermore, he has reached more than 2 mio monthly listeners on
+          Spotify on a regular basis and has played some of the biggest festival
+          stages in Denmark.
+        </p>
+      </div>
+
       <img
         class="image-2"
-        src="public/hs-1.webp"
+        src="http://frederikkevolkdal.com/img_video/hs-1.webp"
         alt="faustix"
         loading="lazy"
       />
@@ -73,7 +80,6 @@ import CardEvent from "../components/card-event.astro";
     text-align: left;
     font-size: 1rem;
     color: var(--white-color);
-    margin: auto;
   }
   .grid-container {
     display: grid;
@@ -85,15 +91,27 @@ import CardEvent from "../components/card-event.astro";
   }
   .image {
     width: 100%;
-    object-fit: contain;
+    height: auto;
+    object-fit: cover;
     margin-left: auto;
     margin-right: auto;
   }
 
   .image-2 {
     width: 100%;
-    object-fit: contain;
+    height: auto;
+    object-fit: cover;
     margin-left: auto;
     margin-right: auto;
+  }
+  @media screen and (min-width: 768px) {
+    .image-2 {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -400px;
+    }
   }
 </style>
