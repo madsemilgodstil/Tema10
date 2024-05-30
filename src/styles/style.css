@@ -26,20 +26,26 @@ body {
 
 @font-face {
   font-family: "Main";
-  src: url(../public/fonts/archivoblack-regular-webfont.woff) format("woff");
-  src: url(../public/fonts/archivoblack-regular-webfont.woff2) format("woff2");
+  src: url(http://frederikkevolkdal.com/iconer_faustix/fonts/archivoblack-regular-webfont.woff)
+    format("woff");
+  src: url(http://frederikkevolkdal.com/iconer_faustix/fonts/archivoblack-regular-webfont.woff2)
+    format("woff2");
 }
 
 @font-face {
   font-family: "Second";
-  src: url(../public/fonts/ubuntu-regular-webfont.woff) format("woff");
-  src: url(../public/fonts/ubuntu-regular-webfont.woff2) format("woff2");
+  src: url(http://frederikkevolkdal.com/iconer_faustix/fonts/ubuntu-regular-webfont.woff)
+    format("woff");
+  src: url(http://frederikkevolkdal.com/iconer_faustix/fonts/ubuntu-regular-webfont.woff2)
+    format("woff2");
 }
 
 @font-face {
   font-family: "Third";
-  src: url(../public/fonts/kanit-light-webfont.woff) format("woff");
-  src: url(../public/fonts/kanit-light-webfont.woff2) format("woff2");
+  src: url(http://frederikkevolkdal.com/iconer_faustix/fonts/kanit-light-webfont.woff)
+    format("woff");
+  src: url(http://frederikkevolkdal.com/iconer_faustix/fonts/kanit-light-webfont.woff2)
+    format("woff2");
 }
 
 h1 {
