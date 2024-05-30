@@ -15,7 +15,7 @@ import "../styles/style.css";
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0);
+    background-color: var(--black-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,12 +23,11 @@ import "../styles/style.css";
   }
 
   .loading-animation {
-    width: 300px; /* Adjust size as needed */
-    height: 300px; /* Adjust size as needed */
-    /* background-image: url("../public/candy-green.svg"); */
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     background-repeat: no-repeat;
-    animation: pulse 4s infinite; /* Adjust animation duration as needed */
+    animation: pulse 3s infinite;
   }
 
   @keyframes pulse {
@@ -50,19 +49,18 @@ import "../styles/style.css";
     }
   }
 </style>
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var loader = document.querySelector(".loading-screen");
-    if (loader) {
-      (loader as HTMLElement).style.display = "flex"; // Show the loader
+    if (loader instanceof HTMLElement) {
+      loader.style.display = "flex";
     }
 
     setTimeout(function () {
       var loader = document.querySelector(".loading-screen");
-      if (loader) {
-        (loader as HTMLElement).style.display = "none"; // Hide the loader after 2 seconds
+      if (loader instanceof HTMLElement) {
+        loader.style.display = "none";
       }
-    }, 3000); // 2000 milliseconds = 2 seconds
+    }, 3000);
   });
 </script>

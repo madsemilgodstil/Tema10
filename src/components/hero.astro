@@ -3,14 +3,6 @@ import "../styles/style.css";
 ---
 
 <article>
-  <!-- <iframe
-    style="border-radius:12px"
-    src="https://open.spotify.com/embed/artist/6jPriOYMyUL9kNonBI1CNd?utm_source=generator&theme=0"
-    width="50%"
-    height="50%"
-    frameborder="0"
-    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy"></iframe> -->
   <img
     src="http://frederikkevolkdal.com/iconer_faustix/logo/logo-red.svg"
     alt="logo"
@@ -20,22 +12,15 @@ import "../styles/style.css";
 <style>
   article {
     width: 100%;
-    height: 1100px;
     padding: 1rem;
     background-image: url(http://frederikkevolkdal.com/img_video/hs-1.webp);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     color: var(--black-color);
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
   }
 
-  @media (max-width: 768px) {
-    article {
-      height: 100%;
-      background-size: cover;
-    }
-  }
   img {
     display: block;
     margin-left: auto;
@@ -43,4 +28,14 @@ import "../styles/style.css";
     margin-top: 45%;
     width: 50%;
   }
+
+  @media screen and (min-width: 500px) {
+  }
+
+  @media screen and (min-width: 1000px) {
+  }
 </style>
+
+<!-- @media screen and (min-width: 500px) {}
+
+@media screen and (min-width: 1000px) {} -->

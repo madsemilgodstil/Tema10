@@ -251,7 +251,6 @@ p {
 a {
   text-decoration: none;
   font-family: "Third", "Kanit";
-  color: var(--white-color);
 }
 
 label {
